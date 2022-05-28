@@ -1,7 +1,7 @@
 <template>
   <div class="weather">
     <h1>Detta är vädret</h1>
-    <div class="weather-box">
+    <div class="weatherBox">
       <img v-bind:src="this.weatherIcon"/>
       <h4>{{this.showWeather}}</h4>
     </div>
@@ -15,7 +15,7 @@ export default {
   name: "WeatherToday",
   data() {
     return {
-      api_key: "0d1ac2ea3b5b859686a80649d53906c5",
+      //api_key: "0d1ac2ea3b5b859686a80649d53906c5",
       showWeather: "",
       weatherIcon: ""
     };
@@ -35,7 +35,7 @@ export default {
         .then((data) => {
           data.weather.map((item) => {
             this.showWeather = item.description;
-            this.weatherIcon = "http://openweathermap.org/img/wn/" + item.icon + "@2x.png";
+            this.weatherIcon = "http://openweathermap.org/img/wn/" + item.icon + "@4x.png";
           });
         });
     }
@@ -47,16 +47,16 @@ export default {
   height: 25rem;
   width: 25rem;
   border-radius: 3rem;
-  border: solid 1px blue;
-  box-shadow: 0px 0px 10px blue;
+  border: solid 1px #0F9D58;
+  box-shadow: 0px 0px 10px #0F9D58;
 }
-.weatherbox {
+.weatherBox {
   display: flex;
     align-items: center;
     align-content: center;
     justify-content: center;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: nowrap;
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 </style>

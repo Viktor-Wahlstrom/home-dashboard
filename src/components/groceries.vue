@@ -16,7 +16,7 @@ export default {
   height: 25rem;
   width: 25rem;
   border-radius: 3rem;
-  border: solid 1px orange;
-  box-shadow: 0px 0px 10px orange;
+  border: solid 1px #F4B400;
+  box-shadow: 0px 0px 10px #F4B400;
 }
 </style>
