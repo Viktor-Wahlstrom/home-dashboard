@@ -2,8 +2,8 @@
   <div class="weather">
     <h1>Detta är vädret</h1>
     <div class="weather-box">
+      <img v-bind:src="this.weatherIcon"/>
       <div>{{this.showWeather}}</div>
-      <div>{{this.weahterIcon}}</div>
     </div>
   </div>
 </template>
@@ -12,18 +12,17 @@
 import axios from "axios";
 
 export default {
-  name: "App",
+  name: "WeatherToday",
   data() {
     return {
       //api_key: "0d1ac2ea3b5b859686a80649d53906c5",
       showWeather: "",
-      weahterIcon: ""
+      weatherIcon: ""
     };
   },
 
   mounted() {
     this.fetchWeather();
-    this.fetchIcon();
   },
 
   methods: {
@@ -36,24 +35,12 @@ export default {
         .then((data) => {
           data.weather.map((item) => {
             this.showWeather = item.description;
-            this.weahterIcon = item.icon;
+            this.weatherIcon = "http://openweathermap.org/img/wn/" + item.icon + "@2x.png";
           });
         });
-    },
-    fetchIcon() {
-      const Iconurl = 
-        "http://openweathermap.org/img/wn/" + this.weahterIcon + "@2x.png";
-
-        axios.get(Iconurl)
-        .then((res) => res.data)
-        .then((data) => {
-          data.weather.map((item) => {
-            this.weahterIcon = item.icon;
-              });
-        });
     }
-  },
-};
+    }
+  }
 </script>
 <style scoped>
 .weather {
