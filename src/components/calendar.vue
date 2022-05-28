@@ -42,25 +42,25 @@ export default {
 
 switch(dayOfWeekNumber){
     case 0: 
-        nameOfDay = 'Sunday';
+        nameOfDay = 'Söndag';
         break;
     case 1:
-        nameOfDay = 'Monday';
+        nameOfDay = 'Mondag';
         break;
     case 2:
-        nameOfDay = 'Tuesday';
+        nameOfDay = 'Tisdag';
         break;
     case 3:
-        nameOfDay = 'Wednesday';
+        nameOfDay = 'Onsdag';
         break;
     case 4:
-        nameOfDay = 'Thursday';
+        nameOfDay = 'Torsdag';
         break;
     case 5:
-        nameOfDay = 'Friday';
+        nameOfDay = 'Fredag';
         break;
     case 6:
-        nameOfDay = 'Saturday';
+        nameOfDay = 'Lördag';
         break;
 
 }
