@@ -15,7 +15,7 @@ export default {
   name: "WeatherToday",
   data() {
     return {
-      //api_key: "0d1ac2ea3b5b859686a80649d53906c5",
+      api_key: "0d1ac2ea3b5b859686a80649d53906c5",
       showWeather: "",
       weatherIcon: ""
     };
