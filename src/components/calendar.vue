@@ -1,9 +1,11 @@
 <template>
   <div class="calendar">
     <h1>Dagens datum</h1>
+    <div class="time">
     <h3 id="clock"></h3>
-    <h3 id="today"></h3>
+    <h2 id="today"></h2>
     <h3 id="week"></h3>
+    </div>
   </div>
 </template>
 
@@ -85,9 +87,27 @@ switch(dayOfWeekNumber){
   border: solid 1px #4285F4;
   box-shadow: 0px 0px 10px #4285F4;
 }
+.time {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: stretch;
+}
 #clock {
   color: black;
   text-shadow: 0.5px 0.6px black;
-
+  margin-top: 3rem;
+}
+#today {
+  color: black;
+  text-shadow: 0.5px 0.6px black;
+  margin-top: 1.2rem;
+  font-size: 3rem;
+}
+#week {
+  color: black;
+  text-shadow: 0.5px 0.6px black;
+  margin-top: 1.2rem;
+  font-size: 1.7;
 }
 </style>
