@@ -27,8 +27,10 @@ export default {
 </script>
 
 <style>
-.top {
+#app {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.top {
     text-align: center;
     color: #2c3e50;
     margin-top: 60px;
@@ -40,7 +42,6 @@ export default {
     flex-direction: row;
 }
 .bottom { 
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: center;
     color: #2c3e50;
     margin-top: 60px;

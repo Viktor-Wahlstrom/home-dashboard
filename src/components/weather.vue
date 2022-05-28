@@ -3,7 +3,7 @@
     <h1>Detta är vädret</h1>
     <div class="weather-box">
       <img v-bind:src="this.weatherIcon"/>
-      <div>{{this.showWeather}}</div>
+      <h4>{{this.showWeather}}</h4>
     </div>
   </div>
 </template>
@@ -15,7 +15,7 @@ export default {
   name: "WeatherToday",
   data() {
     return {
-      //api_key: "0d1ac2ea3b5b859686a80649d53906c5",
+      api_key: "0d1ac2ea3b5b859686a80649d53906c5",
       showWeather: "",
       weatherIcon: ""
     };
@@ -49,5 +49,14 @@ export default {
   border-radius: 3rem;
   border: solid 1px blue;
   box-shadow: 0px 0px 10px blue;
+}
+.weatherbox {
+  display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 3rem;
 }
 </style>
