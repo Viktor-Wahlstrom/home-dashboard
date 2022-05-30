@@ -45,7 +45,7 @@ switch(dayOfWeekNumber){
         nameOfDay = 'Söndag';
         break;
     case 1:
-        nameOfDay = 'Mondag';
+        nameOfDay = 'Måndag';
         break;
     case 2:
         nameOfDay = 'Tisdag';
@@ -84,6 +84,7 @@ switch(dayOfWeekNumber){
   height: 25rem;
   width: 25rem;
   border-radius: 3rem;
+  background-color: rgb(238, 238, 238);
   border: solid 1px #4285F4;
   box-shadow: 0px 0px 10px #4285F4;
 }

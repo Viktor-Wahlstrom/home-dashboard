@@ -3,15 +3,8 @@
     <h1>Inköpslista
     </h1>
     <div class="list">
-      <label for="checkbox">
-    <input type="checkbox"/>smör
-    <input type="checkbox"/>grädde
-    <input type="checkbox"/>mjöl
-    <input type="checkbox"/>tomater
-    <input type="checkbox"/>jordgubbar
-    <input type="checkbox"/>flingor
-      </label>
     </div>  
+    <input class="input" type="text" placeholder="Vad vill du köpa"/>
   </div>
 </template>
 
@@ -26,6 +19,7 @@ export default {
   height: 25rem;
   width: 25rem;
   border-radius: 3rem;
+  background-color: rgb(238, 238, 238);
   border: solid 1px #F4B400;
   box-shadow: 0px 0px 10px #F4B400;
 }
@@ -36,6 +30,11 @@ export default {
     align-content: space-evenly;
     align-items: baseline;
     justify-items: center;
+}
+.input {
+    position: absolute;
+    margin-left: -5rem;
+    margin-top: 16rem;
 }
 
 </style>

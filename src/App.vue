@@ -29,7 +29,7 @@ export default {
 <style>
 html {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background: #FAF9F6;
+    background: #a9a9a8;
 }
 .top {
     text-align: center;
