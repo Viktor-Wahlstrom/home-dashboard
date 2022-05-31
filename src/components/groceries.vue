@@ -1,17 +1,45 @@
 <template>
   <div class="groceries">
-    <h1>Inköpslista
-    </h1>
-    <div class="list">
-    </div>  
-    <input class="input" type="text" placeholder="Vad vill du köpa"/>
+    <h1>{{ this.name }}</h1>
+    <ul class="liststart"></ul>
+    <input class="input" type="text" placeholder="Vad vill du köpa" />
+    <button v-on:Click="this.addItem()">{{ this.buttonName }}</button>
+    <button v-on:CLick="this.removeAll()">Rensa</button>
   </div>
 </template>
 
 <script>
+import { store } from "@/store";
+
 export default {
-  name: 'GroceriesToBuy',
-}
+  name: "GroceriesToBuy",
+  data() {
+    return {
+      name: "Inköpslista",
+      buttonName: "Lägg till",
+    };
+  },
+
+  mounted() {},
+
+  methods: {
+    addItem() {
+      const input = document.querySelector(".input");
+      let lastItem =
+        store.state.GrocerieList[store.state.GrocerieList.length - 1];
+      store.state.GrocerieList.push(input.value);
+      console.log(store.state.GrocerieList);
+
+      let list = document.querySelector(".liststart");
+      let li = document.createElement("li");
+      li.innerText = lastItem;
+      list.appendChild(li);
+    },
+    removeAll() {
+      document.querySelector(".liststart").innerHTML = "";
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -20,21 +48,20 @@ export default {
   width: 25rem;
   border-radius: 3rem;
   background-color: rgb(238, 238, 238);
-  border: solid 1px #F4B400;
-  box-shadow: 0px 0px 10px #F4B400;
+  border: solid 1px #f4b400;
+  box-shadow: 0px 0px 10px #f4b400;
 }
 .list {
-    justify-content: center;
-    text-align: center;
-    display: contents;
-    align-content: space-evenly;
-    align-items: baseline;
-    justify-items: center;
+  justify-content: center;
+  text-align: center;
+  display: contents;
+  align-content: space-evenly;
+  align-items: baseline;
+  justify-items: center;
 }
 .input {
-    position: absolute;
-    margin-left: -5rem;
-    margin-top: 16rem;
+  position: absolute;
+  margin-left: -5rem;
+  margin-top: 16rem;
 }
-
 </style>
