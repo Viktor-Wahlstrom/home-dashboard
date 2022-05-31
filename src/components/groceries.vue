@@ -3,8 +3,8 @@
     <h1>{{ this.name }}</h1>
     <ul class="liststart"></ul>
     <input class="input" type="text" placeholder="Vad vill du köpa" />
-    <button v-on:Click="this.addItem()">{{ this.buttonName }}</button>
-    <button v-on:CLick="this.removeAll()">Rensa</button>
+    <button class="addItem" v-on:Click="this.addItem()">{{ this.buttonName }}</button>
+    <button class="removeAll" v-on:Click="this.removeAll()">{{this.remove}}</button>
   </div>
 </template>
 
@@ -17,6 +17,7 @@ export default {
     return {
       name: "Inköpslista",
       buttonName: "Lägg till",
+      remove: "Rensa"
     };
   },
 
@@ -25,18 +26,25 @@ export default {
   methods: {
     addItem() {
       const input = document.querySelector(".input");
-      let lastItem =
-        store.state.GrocerieList[store.state.GrocerieList.length - 1];
+      let lastItem = store.state.GrocerieList.pop();
       store.state.GrocerieList.push(input.value);
-      console.log(store.state.GrocerieList);
 
+      if ( store.state.GrocerieList.length > 1){ 
       let list = document.querySelector(".liststart");
       let li = document.createElement("li");
       li.innerText = lastItem;
       list.appendChild(li);
+      }
+      else {
+      let list = document.querySelector(".liststart");
+      let li = document.createElement("li");
+      li.innerText = store.state.GrocerieList [0];
+      list.appendChild(li);
+      }
     },
     removeAll() {
-      document.querySelector(".liststart").innerHTML = "";
+     console.log('hej')
+     document.querySelector(".liststart").innerHTML = "";
     },
   },
 };
@@ -61,7 +69,18 @@ export default {
 }
 .input {
   position: absolute;
-  margin-left: -5rem;
-  margin-top: 16rem;
+  top: 24rem;
+  left: 43rem
+}
+.addItem {
+  position: absolute;
+  top: 24rem;
+  left: 54rem;
+
+}
+.removeAll{
+  position: absolute;
+  top: 24rem;
+  left: 59rem;
 }
 </style>
