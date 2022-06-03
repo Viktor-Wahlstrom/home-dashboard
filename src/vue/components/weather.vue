@@ -47,7 +47,6 @@ export default {
   height: 25rem;
   width: 25rem;
   border-radius: 3rem;
-  background-color: rgb(238, 238, 238);
   border: solid 1px #0F9D58;
   box-shadow: 0px 0px 10px #0F9D58;
 }

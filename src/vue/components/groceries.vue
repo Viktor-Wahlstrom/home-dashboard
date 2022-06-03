@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import { store } from "@/store";
+import { store } from '../store';
 
 export default {
   name: "GroceriesToBuy",
@@ -43,7 +43,6 @@ export default {
       }
     },
     removeAll() {
-     console.log('hej')
      document.querySelector(".liststart").innerHTML = "";
     },
   },
@@ -55,7 +54,6 @@ export default {
   height: 25rem;
   width: 25rem;
   border-radius: 3rem;
-  background-color: rgb(238, 238, 238);
   border: solid 1px #f4b400;
   box-shadow: 0px 0px 10px #f4b400;
 }

@@ -5,7 +5,7 @@
   <Calendar />
   </div>
   <div class="bottom">
-    <Chat />
+    <FamilyChat />
   </div>
 </template>
 
@@ -13,7 +13,7 @@
 import Weather from './components/weather.vue'
 import Groceries from './components/groceries.vue'
 import Calendar from './components/calendar.vue'
-import Chat from './components/chat.vue'
+import FamilyChat from './components/familyChat.vue'
 
 export default {
   name: 'App',
@@ -21,12 +21,12 @@ export default {
     Weather,
     Groceries,
     Calendar,
-    Chat
+    FamilyChat
 }
 }
 </script>
 
-<style>
+<style scoped>
 html {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background: #a9a9a8;

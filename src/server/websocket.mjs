@@ -19,7 +19,7 @@ export const Socket = (server) => {
             console.log(parsedMessage);
             [...client.keys()].forEach(client => {
                 client.send(JSON.stringify({
-                    message: parsedMessage
+                    name: parsedMessage
                 }))
             })
         })
